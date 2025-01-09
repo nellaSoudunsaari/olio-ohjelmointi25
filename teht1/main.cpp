@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int satunnainenluku = 20;
-    int arvaus;
+    int arvaus = 0;
     while(true){
         cout << "Arvaa luku: " << endl;
         cin >> arvaus;
