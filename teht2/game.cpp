@@ -1,30 +1,16 @@
+#include "game.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
-int game(int maxnum);
-
-int main()
-{
-    int arvauslkm = 0;
-    int maxnum = 40;
-    arvauslkm = game(maxnum);
-    cout << "Arvausten lukumaara: " << arvauslkm << endl;
-    return 0;
+Game::Game() {
+    cout << "Arvaa luku: " << endl;
 }
 
-int game(int maxnum){
-
-    int arvaus = 0;
-    int arvauslkm = 0;
-
-    srand(time(NULL));
-    int satunnainenluku = rand() % maxnum;
-
+int Game::Play(){
     while(true){
-        cout << "Arvaa luku: " << endl;
         cin >> arvaus;
         cout << "Arvauksesi: " << arvaus << endl;
         if(arvaus == satunnainenluku){
@@ -47,4 +33,8 @@ int game(int maxnum){
     }
 
     return arvauslkm;
+}
+
+void Game::printGameResult(int arvauslkm){
+    cout << "Arvausten lukumaara: " << arvauslkm << endl;
 }
