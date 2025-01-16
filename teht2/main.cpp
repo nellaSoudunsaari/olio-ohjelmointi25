@@ -6,9 +6,8 @@ using namespace std;
 
 int main()
 {
-    Game peliolio(70);
+    Game peliolio(30);
     cout << endl;
     peliolio.play();
-    cout << endl;
     return 0;
 }

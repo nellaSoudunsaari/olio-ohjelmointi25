@@ -8,16 +8,15 @@ using namespace std;
 Game::Game(int maxNumber){
     maxnum = maxNumber;
     cout << "Konstruktori" << endl;
-    cout << "MaxNumber" << maxNumber << endl;
+    cout << "Pelin maxNumber on " << maxNumber << endl;
 }
 
 Game::~Game()
 {
-    //cout << "Dekonstruktori" << endl;
+    cout << "Muisti pyyhitty tai jtn" << endl;
 }
 
 void Game::play(){
-    cout << "Tämä toimii" << endl;
     arvaus = 0;
     arvauslkm = 0;
 
@@ -47,12 +46,10 @@ void Game::play(){
         }
     }
     printGameResult();
-
 }
 
 void Game::printGameResult()
 {
     cout << "Arvausten lukumaara: " << arvauslkm << endl;
 }
-
 
