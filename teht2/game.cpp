@@ -5,12 +5,27 @@
 
 using namespace std;
 
-Game::Game() {
-    cout << "Arvaa luku: " << endl;
+Game::Game(int maxNumber){
+    maxnum = maxNumber;
+    cout << "Konstruktori" << endl;
+    cout << "MaxNumber" << maxNumber << endl;
 }
 
-int Game::Play(){
+Game::~Game()
+{
+    //cout << "Dekonstruktori" << endl;
+}
+
+void Game::play(){
+    cout << "Tämä toimii" << endl;
+    arvaus = 0;
+    arvauslkm = 0;
+
+    srand(time(NULL));
+    satunnainenluku = rand() % maxnum;
+
     while(true){
+        cout << "Arvaa luku: " << endl;
         cin >> arvaus;
         cout << "Arvauksesi: " << arvaus << endl;
         if(arvaus == satunnainenluku){
@@ -31,10 +46,13 @@ int Game::Play(){
                  << endl;
         }
     }
+    printGameResult();
 
-    return arvauslkm;
 }
 
-void Game::printGameResult(int arvauslkm){
+void Game::printGameResult()
+{
     cout << "Arvausten lukumaara: " << arvauslkm << endl;
 }
+
+
