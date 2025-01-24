@@ -1,9 +1,10 @@
 #include <iostream>
+#include "chef.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    chef c_olio("Hannu");
     return 0;
 }
