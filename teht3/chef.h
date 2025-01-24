@@ -17,18 +17,4 @@ protected:
     string chefName;
 };
 
-class italianChef
-{
-public:
-    italianChef(string);
-    ~italianChef();
-    bool askSecret(string, int, int);
-
-private:
-    string password = "pizza";
-    int flour;
-    int water;
-    int makePizza();
-};
-
 #endif // CHEF_H
