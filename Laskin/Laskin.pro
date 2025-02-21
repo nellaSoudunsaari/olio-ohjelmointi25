@@ -25,3 +25,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     laskinbg.jpg
+
+RESOURCES += \
+    resources.qrc

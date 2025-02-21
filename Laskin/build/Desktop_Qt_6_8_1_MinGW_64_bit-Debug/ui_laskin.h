@@ -49,16 +49,33 @@ public:
         if (Laskin->objectName().isEmpty())
             Laskin->setObjectName("Laskin");
         Laskin->resize(413, 525);
+        Laskin->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(Laskin);
         centralwidget->setObjectName("centralwidget");
+        centralwidget->setStyleSheet(QString::fromUtf8(".QWidget{\n"
+"background-image: url(:/ui/kuvat/laskinbg.jpg);\n"
+"}\n"
+".QPushButton{\n"
+"background-color: qlineargradient(spread:pad, x1:0.52, y1:0, x2:0.519553, y2:1, stop:0 rgba(239, 255, 230, 255), stop:1 rgba(161, 244, 162, 255));\n"
+"color: #000000;\n"
+"}\n"
+".QLineEdit{\n"
+"background-color: #FFFFFF;\n"
+"color: #000000;\n"
+"}\n"
+".QLineEdit #enabled{\n"
+"background-color: #000000;\n"
+"}"));
         result = new QLineEdit(centralwidget);
         result->setObjectName("result");
+        result->setEnabled(false);
         result->setGeometry(QRect(20, 100, 361, 51));
         QFont font;
         font.setFamilies({QString::fromUtf8("Terminal")});
         font.setPointSize(22);
         result->setFont(font);
         result->setAlignment(Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing);
+        result->setReadOnly(true);
         btn7 = new QPushButton(centralwidget);
         btn7->setObjectName("btn7");
         btn7->setGeometry(QRect(20, 240, 60, 60));
@@ -131,19 +148,25 @@ public:
         btnClr->setFont(font1);
         num1 = new QLineEdit(centralwidget);
         num1->setObjectName("num1");
+        num1->setEnabled(true);
         num1->setGeometry(QRect(20, 30, 131, 51));
         num1->setFont(font);
         num1->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        num1->setReadOnly(true);
         operand = new QLineEdit(centralwidget);
         operand->setObjectName("operand");
+        operand->setEnabled(false);
         operand->setGeometry(QRect(170, 30, 61, 51));
         operand->setFont(font);
         operand->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        operand->setReadOnly(true);
         num2 = new QLineEdit(centralwidget);
         num2->setObjectName("num2");
+        num2->setEnabled(false);
         num2->setGeometry(QRect(250, 30, 131, 51));
         num2->setFont(font);
         num2->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        num2->setReadOnly(true);
         btnEnt = new QPushButton(centralwidget);
         btnEnt->setObjectName("btnEnt");
         btnEnt->setGeometry(QRect(130, 170, 111, 60));
@@ -151,6 +174,8 @@ public:
         font3.setFamilies({QString::fromUtf8("Terminal")});
         font3.setPointSize(10);
         btnEnt->setFont(font3);
+        btnEnt->setAutoFillBackground(false);
+        btnEnt->setStyleSheet(QString::fromUtf8(""));
         Laskin->setCentralWidget(centralwidget);
 
         retranslateUi(Laskin);

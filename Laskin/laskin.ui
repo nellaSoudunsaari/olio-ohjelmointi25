@@ -13,8 +13,31 @@
   <property name="windowTitle">
    <string>Laskin</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">.QWidget{
+background-image: url(:/ui/kuvat/laskinbg.jpg);
+}
+.QPushButton{
+background-color: qlineargradient(spread:pad, x1:0.52, y1:0, x2:0.519553, y2:1, stop:0 rgba(239, 255, 230, 255), stop:1 rgba(161, 244, 162, 255));
+color: #000000;
+}
+.QLineEdit{
+background-color: #FFFFFF;
+color: #000000;
+}
+.QLineEdit #enabled{
+background-color: #000000;
+}</string>
+   </property>
    <widget class="QLineEdit" name="result">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -34,6 +57,9 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="btn7">
@@ -341,6 +367,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="num1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -361,8 +390,14 @@
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="operand">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -383,8 +418,14 @@
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="num2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -405,6 +446,9 @@
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="btnEnt">
     <property name="geometry">
@@ -420,6 +464,12 @@
       <family>Terminal</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Enter number</string>

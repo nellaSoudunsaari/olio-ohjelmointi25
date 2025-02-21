@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/ui/kuvat">
+        <file>laskinbg.jpg</file>
+    </qresource>
+</RCC>
