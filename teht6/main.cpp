@@ -1,5 +1,4 @@
 #include <iostream>
-//0#include <stdio.h>
 #include <vector>
 #include <algorithm>
 #include "student.h"
@@ -52,6 +51,7 @@ int main ()
             // algoritmikirjaston sort funktion avulla
             // ja tulosta printStudentInfo() funktion avulla järjestetyt
             // opiskelijat
+
 
             sort(studentList.begin(), studentList.end(), [](Student& a, Student& b){
                 return a.getName() < b.getName();

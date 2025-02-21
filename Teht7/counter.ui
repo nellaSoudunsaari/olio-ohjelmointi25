@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Counter</class>
+ <widget class="QMainWindow" name="Counter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>357</width>
+    <height>186</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Counter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52514, y1:0, x2:0.631, y2:0.988636, stop:0 rgba(170, 85, 255, 255), stop:0.759777 rgba(255, 170, 255, 255));</string>
+   </property>
+   <widget class="QPushButton" name="incBtn">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>40</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Script MT</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Increase</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resetBtn">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>110</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Script MT</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="numScr">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>151</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
